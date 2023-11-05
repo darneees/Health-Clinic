@@ -1,0 +1,42 @@
+// collors
+$background-color: #F3F4F6;
+$header-color: #F9FAFB;
+$title-color: #1F2937;
+$call-button: #F59E0B;
+$text-color: #9CA3AF;
+$icon-color: #e0e0e0;
+$button-color: #3B82F6;
+$shadow-color: rgba(0, 0, 0, 0.10) 0 5px 20px;
+$mask-iamge: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+$status-color: #10B981;
+$modal-color: rgba(0, 0, 0, 0.7);
+
+
+@mixin Align ($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin weekAlign ($justify, $align, $direction) {
+    display: inline-flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+@mixin sizeMain() {
+    width: 100vw;
+    height: 92vh;
+}
+
+@mixin sizeHead() {
+    width: 100%;
+    height: 8vh;
+}
+
+
+// menu mobile
