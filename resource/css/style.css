@@ -425,6 +425,7 @@ body {
 }
 #main_container .popup_video {
   background-color: #F9FAFB;
+  display: none;
   position: fixed;
   max-width: 350px;
   width: 90%;
