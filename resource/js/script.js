@@ -58,3 +58,29 @@ function atualizarRelogio() {
 }
 
 setInterval(atualizarRelogio, 1000);
+
+
+// modal permission
+
+const btnVideo = document.querySelectorAll('.btn');
+const popup = document.getElementById('popupVideo');
+const overlayVideo = document.getElementById('overlayVideo');
+const permitirCamera = document.getElementById('allowCamera');
+const negarCamera = document.getElementById('denyCamera');
+
+btnVideo.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    popup.style.display = 'block';
+    overlayVideo.style.display = 'block';
+  });
+});
+
+permitirCamera.addEventListener('click', () => {
+  popup.style.display = 'none';
+  overlayVideo.style.display = 'none';
+});
+
+negarCamera.addEventListener('click', () => {
+  popup.style.display = 'none';
+  overlayVideo.style.display = 'none';
+});
