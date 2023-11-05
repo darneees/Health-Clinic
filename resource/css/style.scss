@@ -417,6 +417,86 @@ body {
             }
         }
     }
+
+    .popup_video {
+        background-color: $header-color;
+        // display: none;
+        position: fixed;
+        max-width: 350px;
+        width: 90%;
+        height: 220px;
+        border-radius: 1.5rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        z-index: 5;
+        box-shadow: $shadow-color;
+        padding: 1.5rem 1.2rem;
+
+        article {
+            @include Align(center, center, column);
+            gap: 3rem;
+            width: 100%;
+            height: 100%;
+
+            h1 {
+                font-size: 1.7rem;
+                color: $title-color;
+                text-align: center
+            }
+
+            .btns {
+                @include Align(center, center, row);
+                width: 100%;
+                gap: 1rem;
+
+                #allowCamera {
+                    @include Align(center, center, row);
+                    background-color: $button-color;
+                    color: $header-color;
+                    width: 40%;
+                    height: 3rem;
+                    border: none;
+                    border-radius: .6rem;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    gap: .5rem;
+                    outline: none;
+
+                    &:hover {
+                        background-color: $text-color;
+                    }
+                }
+
+                #denyCamera {
+                    @include Align(center, center, row);
+                    background-color: transparent;
+                    border: 3px solid $text-color;
+                    color: $text-color;
+                    width: 40%;
+                    height: 3rem;
+                    border-radius: .6rem;
+                    font-size: 1rem;
+                    gap: .5rem;
+                    cursor: pointer;
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $modal-color;
+        z-index: 3;
+        backdrop-filter: blur(2.5px);
+    }
 }
 
 #footer_container {
@@ -618,15 +698,15 @@ body {
                 }
             }
 
-            
+
             .status {
                 top: 9px;
                 left: 90px;
                 font-size: 1.2rem;
                 opacity: .6;
-    
+
             }
-    
+
             .menu {
                 font-size: 2.2rem;
             }
@@ -640,55 +720,55 @@ body {
                 max-width: 49%;
                 padding: 1.2rem;
                 border-radius: 1.2rem;
-    
+
                 .person_header {
                     @include Align(center, center, row);
                     width: 100%;
-    
+
                     .box:nth-child(1) {
                         @include Align(flex-start, center, row);
                         width: 75%;
                         height: 80px;
-    
+
                         img {
                             height: 3.7rem;
                         }
-    
+
                         h4 {
                             font-size: 1.2rem;
                         }
                     }
-    
+
                     .box:nth-child(2) {
                         @include Align(flex-end, center, row);
                         width: 25%;
                         height: 80px;
-    
+
                         i {
                             font-size: 1.3rem;
                             border-radius: .7rem;
                             padding: 1.2rem;
                         }
-    
+
                     }
                 }
-    
+
                 .person_button {
                     @include Align(center, flex-start, column);
                     width: 100%;
                     height: 100px;
-    
+
                     p {
                         color: $title-color;
                         height: 5%;
                         font-size: .9rem;
                     }
-    
+
                     .box {
                         @include Align(space-between, flex-end, row);
                         width: 100%;
                         height: 95%;
-    
+
                         .btn:nth-child(1) {
                             background-color: $call-button;
                             box-shadow: $shadow-color;
@@ -699,13 +779,13 @@ body {
                             color: $header-color;
                             border-radius: .6rem;
                             cursor: pointer;
-    
+
                             &:hover {
                                 background-color: $text-color;
                                 transition: .3s ease-in-out;
                             }
                         }
-    
+
                         .btn:nth-child(2) {
                             background-color: transparent;
                             border: 2px solid $icon-color;
@@ -715,7 +795,7 @@ body {
                             color: $title-color;
                             border-radius: .6rem;
                             cursor: pointer;
-    
+
                             &:hover {
                                 border: 2px solid $button-color;
                                 color: $button-color;
@@ -725,46 +805,46 @@ body {
                     }
                 }
             }
-    
+
             .person_adress {
                 @include Align(flex-start, center, column);
                 max-width: 49%;
                 box-shadow: $shadow-color;
                 padding: 1rem;
                 border-radius: 1rem;
-    
+
                 .person_header {
                     @include Align(center, center, row);
                     width: 100%;
-    
+
                     .box:nth-child(1) {
                         @include Align(flex-start, center, row);
                         width: 80%;
                         height: 90px;
                         gap: 1rem;
-    
+
                         img {
                             border-radius: 6rem;
                             height: 3.5rem;
                         }
-    
+
                         h4 {
                             font-size: 1.1rem;
                             color: $title-color;
                         }
-    
+
                         p {
                             font-size: .9rem;
                             color: $text-color;
                             font-weight: 200;
                         }
                     }
-    
+
                     .box:nth-child(2) {
                         @include Align(flex-end, center, row);
                         width: 20%;
                         height: 90px;
-    
+
                         i {
                             box-shadow: $shadow-color;
                             font-size: 1.2rem;
@@ -772,21 +852,21 @@ body {
                             border-radius: .7rem;
                             padding: 1.2rem;
                         }
-    
+
                     }
                 }
-    
+
                 .person_button {
                     @include Align(center, flex-start, column);
                     width: 100%;
                     height: 100px;
                     gap: .7rem;
-    
+
                     p {
                         color: $title-color;
                         font-size: .9rem;
                     }
-    
+
                     .adress_btn {
                         background-color: $button-color;
                         box-shadow: $shadow-color;
@@ -797,7 +877,7 @@ body {
                         color: $header-color;
                         border-radius: .6rem;
                         cursor: pointer;
-    
+
                         &:hover {
                             background-color: $text-color;
                             transition: .3s ease-in-out;
@@ -812,22 +892,22 @@ body {
             height: 440px;
             gap: 3rem;
             transition: all .5s ease;
-    
+
             h2 {
                 top: 1.5rem;
             }
-    
+
             .modal_content {
                 @include Align(center, flex-start, column);
                 gap: .8rem;
                 padding: 0 0 0 3.5rem;
             }
-    
+
             .buttons .close_btn {
                 font-size: 1rem;
                 padding: 1rem 4.5rem;
             }
-    
+
         }
     }
 
@@ -986,55 +1066,55 @@ body {
             .person {
                 padding: 1.2rem;
                 border-radius: 1.2rem;
-    
+
                 .person_header {
                     @include Align(center, center, row);
                     width: 100%;
-    
+
                     .box:nth-child(1) {
                         @include Align(flex-start, center, row);
                         width: 75%;
                         height: 80px;
-    
+
                         img {
                             height: 3.7rem;
                         }
-    
+
                         h4 {
                             font-size: 1.2rem;
                         }
                     }
-    
+
                     .box:nth-child(2) {
                         @include Align(flex-end, center, row);
                         width: 25%;
                         height: 80px;
-    
+
                         i {
                             font-size: 1.3rem;
                             border-radius: .7rem;
                             padding: 1.2rem;
                         }
-    
+
                     }
                 }
-    
+
                 .person_button {
                     @include Align(center, flex-start, column);
                     width: 100%;
                     height: 100px;
-    
+
                     p {
                         color: $title-color;
                         height: 5%;
                         font-size: .9rem;
                     }
-    
+
                     .box {
                         @include Align(space-between, flex-end, row);
                         width: 100%;
                         height: 95%;
-    
+
                         .btn:nth-child(1) {
                             background-color: $call-button;
                             box-shadow: $shadow-color;
@@ -1045,13 +1125,13 @@ body {
                             color: $header-color;
                             border-radius: .6rem;
                             cursor: pointer;
-    
+
                             &:hover {
                                 background-color: $text-color;
                                 transition: .3s ease-in-out;
                             }
                         }
-    
+
                         .btn:nth-child(2) {
                             background-color: transparent;
                             border: 2px solid $icon-color;
@@ -1061,7 +1141,7 @@ body {
                             color: $title-color;
                             border-radius: .6rem;
                             cursor: pointer;
-    
+
                             &:hover {
                                 border: 2px solid $button-color;
                                 color: $button-color;
@@ -1071,46 +1151,46 @@ body {
                     }
                 }
             }
-    
+
             .person_adress {
                 @include Align(flex-start, center, column);
                 width: 100%;
                 box-shadow: $shadow-color;
                 padding: 1rem;
                 border-radius: 1rem;
-    
+
                 .person_header {
                     @include Align(center, center, row);
                     width: 100%;
-    
+
                     .box:nth-child(1) {
                         @include Align(flex-start, center, row);
                         width: 80%;
                         height: 90px;
                         gap: 1rem;
-    
+
                         img {
                             border-radius: 6rem;
                             height: 3.5rem;
                         }
-    
+
                         h4 {
                             font-size: 1.1rem;
                             color: $title-color;
                         }
-    
+
                         p {
                             font-size: .9rem;
                             color: $text-color;
                             font-weight: 200;
                         }
                     }
-    
+
                     .box:nth-child(2) {
                         @include Align(flex-end, center, row);
                         width: 20%;
                         height: 90px;
-    
+
                         i {
                             box-shadow: $shadow-color;
                             font-size: 1.2rem;
@@ -1118,21 +1198,21 @@ body {
                             border-radius: .7rem;
                             padding: 1.2rem;
                         }
-    
+
                     }
                 }
-    
+
                 .person_button {
                     @include Align(center, flex-start, column);
                     width: 100%;
                     height: 100px;
                     gap: .7rem;
-    
+
                     p {
                         color: $title-color;
                         font-size: .9rem;
                     }
-    
+
                     .adress_btn {
                         background-color: $button-color;
                         box-shadow: $shadow-color;
@@ -1143,7 +1223,7 @@ body {
                         color: $header-color;
                         border-radius: .6rem;
                         cursor: pointer;
-    
+
                         &:hover {
                             background-color: $text-color;
                             transition: .3s ease-in-out;
@@ -1158,22 +1238,22 @@ body {
             height: 440px;
             gap: 3rem;
             transition: all .5s ease;
-    
+
             h2 {
                 top: 1.5rem;
             }
-    
+
             .modal_content {
                 @include Align(center, flex-start, column);
                 gap: .8rem;
                 padding: 0 0 0 3.5rem;
             }
-    
+
             .buttons .close_btn {
                 font-size: 1rem;
                 padding: 1rem 4.5rem;
             }
-    
+
         }
     }
 
@@ -1328,59 +1408,59 @@ body {
         .week_content {
             @include weekAlign(flex-start, center, row);
             width: 100%;
-        
+
             .person {
                 padding: 1.2rem;
                 border-radius: 1.2rem;
-    
+
                 .person_header {
                     @include Align(center, center, row);
                     width: 100%;
-    
+
                     .box:nth-child(1) {
                         @include Align(flex-start, center, row);
                         width: 75%;
                         height: 80px;
-    
+
                         img {
                             height: 3.7rem;
                         }
-    
+
                         h4 {
                             font-size: 1.2rem;
                         }
                     }
-    
+
                     .box:nth-child(2) {
                         @include Align(flex-end, center, row);
                         width: 25%;
                         height: 80px;
-    
+
                         i {
                             font-size: 1.3rem;
                             border-radius: .7rem;
                             padding: 1.2rem;
                         }
-    
+
                     }
                 }
-    
+
                 .person_button {
                     @include Align(center, flex-start, column);
                     width: 100%;
                     height: 100px;
-    
+
                     p {
                         color: $title-color;
                         height: 5%;
                         font-size: .9rem;
                     }
-    
+
                     .box {
                         @include Align(space-between, flex-end, row);
                         width: 100%;
                         height: 95%;
-    
+
                         .btn:nth-child(1) {
                             background-color: $call-button;
                             box-shadow: $shadow-color;
@@ -1391,13 +1471,13 @@ body {
                             color: $header-color;
                             border-radius: .6rem;
                             cursor: pointer;
-    
+
                             &:hover {
                                 background-color: $text-color;
                                 transition: .3s ease-in-out;
                             }
                         }
-    
+
                         .btn:nth-child(2) {
                             background-color: transparent;
                             border: 2px solid $icon-color;
@@ -1407,7 +1487,7 @@ body {
                             color: $title-color;
                             border-radius: .6rem;
                             cursor: pointer;
-    
+
                             &:hover {
                                 border: 2px solid $button-color;
                                 color: $button-color;
@@ -1417,46 +1497,46 @@ body {
                     }
                 }
             }
-    
+
             .person_adress {
                 @include Align(flex-start, center, column);
                 width: 100%;
                 box-shadow: $shadow-color;
                 padding: 1rem;
                 border-radius: 1rem;
-    
+
                 .person_header {
                     @include Align(center, center, row);
                     width: 100%;
-    
+
                     .box:nth-child(1) {
                         @include Align(flex-start, center, row);
                         width: 80%;
                         height: 90px;
                         gap: 1rem;
-    
+
                         img {
                             border-radius: 6rem;
                             height: 3.5rem;
                         }
-    
+
                         h4 {
                             font-size: 1.1rem;
                             color: $title-color;
                         }
-    
+
                         p {
                             font-size: .9rem;
                             color: $text-color;
                             font-weight: 200;
                         }
                     }
-    
+
                     .box:nth-child(2) {
                         @include Align(flex-end, center, row);
                         width: 20%;
                         height: 90px;
-    
+
                         i {
                             box-shadow: $shadow-color;
                             font-size: 1.2rem;
@@ -1464,21 +1544,21 @@ body {
                             border-radius: .7rem;
                             padding: 1.2rem;
                         }
-    
+
                     }
                 }
-    
+
                 .person_button {
                     @include Align(center, flex-start, column);
                     width: 100%;
                     height: 100px;
                     gap: .7rem;
-    
+
                     p {
                         color: $title-color;
                         font-size: .9rem;
                     }
-    
+
                     .adress_btn {
                         background-color: $button-color;
                         box-shadow: $shadow-color;
@@ -1489,7 +1569,7 @@ body {
                         color: $header-color;
                         border-radius: .6rem;
                         cursor: pointer;
-    
+
                         &:hover {
                             background-color: $text-color;
                             transition: .3s ease-in-out;
@@ -1504,22 +1584,22 @@ body {
             height: 440px;
             gap: 3rem;
             transition: all .5s ease;
-    
+
             h2 {
                 top: 1.5rem;
             }
-    
+
             .modal_content {
                 @include Align(center, flex-start, column);
                 gap: .8rem;
                 padding: 0 0 0 3.5rem;
             }
-    
+
             .buttons .close_btn {
                 font-size: 1rem;
                 padding: 1rem 4.5rem;
             }
-    
+
         }
     }
 
@@ -1678,55 +1758,55 @@ body {
             .person {
                 padding: 1.2rem;
                 border-radius: 1.2rem;
-    
+
                 .person_header {
                     @include Align(center, center, row);
                     width: 100%;
-    
+
                     .box:nth-child(1) {
                         @include Align(flex-start, center, row);
                         width: 75%;
                         height: 80px;
-    
+
                         img {
                             height: 3.7rem;
                         }
-    
+
                         h4 {
                             font-size: 1.2rem;
                         }
                     }
-    
+
                     .box:nth-child(2) {
                         @include Align(flex-end, center, row);
                         width: 25%;
                         height: 80px;
-    
+
                         i {
                             font-size: 1.3rem;
                             border-radius: .7rem;
                             padding: 1.2rem;
                         }
-    
+
                     }
                 }
-    
+
                 .person_button {
                     @include Align(center, flex-start, column);
                     width: 100%;
                     height: 100px;
-    
+
                     p {
                         color: $title-color;
                         height: 5%;
                         font-size: .9rem;
                     }
-    
+
                     .box {
                         @include Align(space-between, flex-end, row);
                         width: 100%;
                         height: 95%;
-    
+
                         .btn:nth-child(1) {
                             background-color: $call-button;
                             box-shadow: $shadow-color;
@@ -1737,13 +1817,13 @@ body {
                             color: $header-color;
                             border-radius: .6rem;
                             cursor: pointer;
-    
+
                             &:hover {
                                 background-color: $text-color;
                                 transition: .3s ease-in-out;
                             }
                         }
-    
+
                         .btn:nth-child(2) {
                             background-color: transparent;
                             border: 2px solid $icon-color;
@@ -1753,7 +1833,7 @@ body {
                             color: $title-color;
                             border-radius: .6rem;
                             cursor: pointer;
-    
+
                             &:hover {
                                 border: 2px solid $button-color;
                                 color: $button-color;
@@ -1763,46 +1843,46 @@ body {
                     }
                 }
             }
-    
+
             .person_adress {
                 @include Align(flex-start, center, column);
                 width: 100%;
                 box-shadow: $shadow-color;
                 padding: 1rem;
                 border-radius: 1rem;
-    
+
                 .person_header {
                     @include Align(center, center, row);
                     width: 100%;
-    
+
                     .box:nth-child(1) {
                         @include Align(flex-start, center, row);
                         width: 80%;
                         height: 90px;
                         gap: 1rem;
-    
+
                         img {
                             border-radius: 6rem;
                             height: 3.5rem;
                         }
-    
+
                         h4 {
                             font-size: 1.1rem;
                             color: $title-color;
                         }
-    
+
                         p {
                             font-size: .9rem;
                             color: $text-color;
                             font-weight: 200;
                         }
                     }
-    
+
                     .box:nth-child(2) {
                         @include Align(flex-end, center, row);
                         width: 20%;
                         height: 90px;
-    
+
                         i {
                             box-shadow: $shadow-color;
                             font-size: 1.2rem;
@@ -1810,21 +1890,21 @@ body {
                             border-radius: .7rem;
                             padding: 1.2rem;
                         }
-    
+
                     }
                 }
-    
+
                 .person_button {
                     @include Align(center, flex-start, column);
                     width: 100%;
                     height: 100px;
                     gap: .7rem;
-    
+
                     p {
                         color: $title-color;
                         font-size: .9rem;
                     }
-    
+
                     .adress_btn {
                         background-color: $button-color;
                         box-shadow: $shadow-color;
@@ -1835,7 +1915,7 @@ body {
                         color: $header-color;
                         border-radius: .6rem;
                         cursor: pointer;
-    
+
                         &:hover {
                             background-color: $text-color;
                             transition: .3s ease-in-out;
@@ -1850,22 +1930,22 @@ body {
             height: 440px;
             gap: 3rem;
             transition: all .5s ease;
-    
+
             h2 {
                 top: 1.6rem;
             }
-    
+
             .modal_content {
                 @include Align(center, flex-start, column);
                 gap: .8rem;
                 padding: 0 0 0 3.5rem;
             }
-    
+
             .buttons .close_btn {
                 font-size: 1rem;
                 padding: 1rem 4.5rem;
             }
-    
+
         }
     }
 
@@ -2012,9 +2092,9 @@ body {
                 left: 72px;
                 font-size: 1rem;
                 opacity: .5;
-    
+
             }
-    
+
             .menu {
                 font-size: 1.8rem;
             }
@@ -2026,56 +2106,56 @@ body {
 
             .person {
                 padding: .5rem 1.2rem 1.2rem 1.2rem;
-    
+
                 .person_header {
-    
+
                     .box:nth-child(1) {
                         @include Align(flex-start, center, row);
                         width: 80%;
-    
+
                         img {
                             height: 3.7rem;
                         }
-    
+
                         h4 {
                             font-size: 1.1rem;
                         }
                     }
-    
+
                     .box:nth-child(2) {
                         @include Align(flex-end, center, row);
                         width: 20%;
-    
+
                         i {
                             border-radius: .6rem;
                             font-size: 1.5rem;
                             padding: 1rem;
                         }
-    
+
                     }
                 }
-    
+
                 .person_button {
-    
+
                     p {
                         font-size: 1rem;
                     }
-    
+
                     .box {
-    
+
                         .btn:nth-child(1) {
                             width: 46%;
                             height: 65px;
-    
+
                             &:hover {
                                 transition: .5s ease-in-out;
                             }
                         }
-    
+
                         .btn:nth-child(2) {
                             width: 46%;
                             height: 65px;
-    
+
                             &:hover {
                                 transition: .5s ease-in-out;
                             }
@@ -2083,54 +2163,54 @@ body {
                     }
                 }
             }
-    
+
             .person_adress {
                 @include Align(flex-start, center, column);
                 padding: .5rem 1.2rem 1.2rem 1.2rem;
-    
+
                 .person_header {
-    
+
                     .box:nth-child(1) {
                         width: 80%;
-    
+
                         img {
                             height: 3.7rem;
                         }
-    
+
                         h4 {
                             font-size: 1.1rem;
                         }
-    
+
                         p {
                             font-size: .9rem;
                         }
                     }
-    
+
                     .box:nth-child(2) {
                         @include Align(flex-end, center, row);
                         width: 20%;
-    
+
                         i {
                             font-size: 1.5rem;
                             border-radius: .6rem;
                             padding: 1rem;
                         }
-    
+
                     }
                 }
-    
+
                 .person_button {
-    
+
                     p {
                         font-size: 1rem;
                     }
-    
+
                     .adress_btn {
                         width: 100%;
                         height: 65px;
                         font-size: 1rem;
                         border-radius: .6rem;
-    
+
                         &:hover {
                             transition: .5s ease-in-out;
                         }
@@ -2144,21 +2224,21 @@ body {
             height: 440px;
             gap: 3rem;
             transition: all .5s ease;
-    
+
             h2 {
                 top: 1.6rem;
             }
-    
+
             .modal_content {
                 gap: 1rem;
                 padding: 0 0 0 2.1rem;
             }
-    
+
             .buttons .close_btn {
                 font-size: 1rem;
                 padding: 1rem 4rem;
             }
-    
+
         }
     }
 
