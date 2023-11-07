@@ -519,12 +519,16 @@ body {
         position: relative;
         gap: 5rem 20rem;
         flex-wrap: wrap;
+        overflow-y: hidden;
 
         section:nth-child(1) {
             @include Align(center, flex-start, column);
             gap: 1.5rem;
 
             .content-head {
+
+                animation: fadeInDown; 
+                animation-duration: 1s;
 
                 h1 {
                     @include Align(center, center, row);
@@ -599,6 +603,9 @@ body {
                     box-shadow: $shadow-color;
                     cursor: pointer;
 
+                    animation: fadeInLeft; 
+                    animation-duration: 1.2s;
+
                     img {
                         width: 100%;
                         height: 100%;
@@ -648,6 +655,9 @@ body {
                     box-shadow: $shadow-color;
                     cursor: pointer;
 
+                    animation: fadeInLeft; 
+                    animation-duration: 1.4s;
+
                     img {
                         width: 100%;
                         height: 100%;
@@ -695,6 +705,10 @@ body {
                     background: $background-color;
                     box-shadow: $shadow-color;
                     cursor: pointer;
+
+                    animation: fadeInLeft; 
+                    animation-duration: 1.6s;
+
 
                     img {
                         width: 100%;
