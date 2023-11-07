@@ -527,6 +527,7 @@ body {
   position: relative;
   gap: 5rem 20rem;
   flex-wrap: wrap;
+  overflow-y: hidden;
 }
 #main_container .content section:nth-child(1) {
   display: flex;
@@ -534,6 +535,10 @@ body {
   align-items: flex-start;
   flex-direction: column;
   gap: 1.5rem;
+}
+#main_container .content section:nth-child(1) .content-head {
+  animation: fadeInDown;
+  animation-duration: 1s;
 }
 #main_container .content section:nth-child(1) .content-head h1 {
   display: flex;
@@ -606,6 +611,8 @@ body {
   background: #F3F4F6;
   box-shadow: rgba(0, 0, 0, 0.1) 0 5px 20px;
   cursor: pointer;
+  animation: fadeInLeft;
+  animation-duration: 1.2s;
 }
 #main_container .content section:nth-child(1) .content-img article:nth-child(1) img {
   width: 100%;
@@ -653,6 +660,8 @@ body {
   background: #F3F4F6;
   box-shadow: rgba(0, 0, 0, 0.1) 0 5px 20px;
   cursor: pointer;
+  animation: fadeInLeft;
+  animation-duration: 1.4s;
 }
 #main_container .content section:nth-child(1) .content-img article:nth-child(2) img {
   width: 100%;
@@ -699,6 +708,8 @@ body {
   background: #F3F4F6;
   box-shadow: rgba(0, 0, 0, 0.1) 0 5px 20px;
   cursor: pointer;
+  animation: fadeInLeft;
+  animation-duration: 1.6s;
 }
 #main_container .content section:nth-child(1) .content-img article:nth-child(3) img {
   width: 100%;
