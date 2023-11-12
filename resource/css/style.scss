@@ -1399,16 +1399,50 @@ body {
                 h1:nth-child(1) {
                     @include Align(center, center, row);
                     background-color: $header-color;
-                    color: $button-color;
+                    color: $block-color;
                     box-shadow: $shadow-color;
                     height: 55px;
                     width: 55px;
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                     border-radius: 2rem;
                     cursor: pointer;
 
                     animation: fadeInLeft;
                     animation-duration: 1.2s;
+                    transition: transform .3s ease;
+
+                    span {
+                        display: none;
+                        letter-spacing: .11rem;
+                    }
+
+                    &:hover {
+                        width: 120px;
+                        color: $button-color;
+                        border: 3px solid $button-color;
+                        transform: scale(1.2);
+                        transition: .3s linear;
+                        border-radius: 1rem;
+
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+
+                h1:nth-child(2) {
+                    @include Align(center, center, row);
+                    background-color: $header-color;
+                    color: $block-color;
+                    box-shadow: $shadow-color;
+                    height: 55px;
+                    width: 55px;
+                    border-radius: 2rem;
+                    cursor: pointer;
+                    font-size: 1rem;
+
+                    animation: fadeInLeft;
+                    animation-duration: 1.6s;
                     transition: transform .3s ease;
 
                     span {
@@ -1431,127 +1465,106 @@ body {
                     }
                 }
 
-                h1:nth-child(2) {
+                h1:nth-child(3) {
                     @include Align(center, center, row);
                     background-color: $header-color;
-                    border: 3px solid $block-color;
+                    color: $block-color;
+                    box-shadow: $shadow-color;
                     height: 55px;
                     width: 55px;
                     border-radius: 2rem;
                     cursor: pointer;
-                    opacity: .5;
+                    font-size: 1rem;
 
                     animation: fadeInLeft;
                     animation-duration: 1.6s;
                     transition: transform .3s ease;
 
-                    &:hover {
-                        border: 3px solid $icon-color;
-                        transform: scale(1.2);
-
-                        span {
-                            background-color: $icon-color;
-                        }
-                    }
-
                     span {
-                        background-color: $block-color;
-                        width: 100%;
-                        height: 3px;
-                        rotate: -45deg;
+                        display: none;
+                        letter-spacing: .11rem;
                     }
-                }
-
-                h1:nth-child(3) {
-                    @include Align(center, center, row);
-                    background-color: $header-color;
-                    border: 3px solid $block-color;
-                    height: 55px;
-                    width: 55px;
-                    border-radius: 2rem;
-                    cursor: pointer;
-                    opacity: .5;
-
-                    animation: fadeInLeft;
-                    animation-duration: 2s;
-                    transition: transform .3s ease;
 
                     &:hover {
-                        border: 3px solid $icon-color;
+                        width: 120px;
+                        color: $button-color;
+                        border: 3px solid $button-color;
                         transform: scale(1.2);
+                        opacity: 1;
+                        transition: .3s linear;
+                        border-radius: 1rem;
 
                         span {
-                            background-color: $icon-color;
+                            display: block;
                         }
-                    }
-
-                    span {
-                        background-color: $block-color;
-                        width: 100%;
-                        height: 3px;
-                        rotate: -45deg;
                     }
                 }
 
                 h1:nth-child(4) {
                     @include Align(center, center, row);
                     background-color: $header-color;
-                    border: 3px solid $block-color;
+                    color: $block-color;
+                    box-shadow: $shadow-color;
                     height: 55px;
                     width: 55px;
+                    font-size: 1rem;
                     border-radius: 2rem;
                     cursor: pointer;
-                    opacity: .5;
 
                     animation: fadeInLeft;
-                    animation-duration: 2.4s;
+                    animation-duration: 1.2s;
                     transition: transform .3s ease;
 
-                    &:hover {
-                        border: 3px solid $icon-color;
-                        transform: scale(1.2);
-
-                        span {
-                            background-color: $icon-color;
-                        }
+                    span {
+                        display: none;
+                        letter-spacing: .11rem;
                     }
 
-                    span {
-                        background-color: $block-color;
-                        width: 100%;
-                        height: 3px;
-                        rotate: -45deg;
+                    &:hover {
+                        width: 120px;
+                        color: $button-color;
+                        border: 3px solid $button-color;
+                        transform: scale(1.2);
+                        transition: .3s linear;
+                        border-radius: 1rem;
+
+                        span {
+                            display: block;
+                        }
                     }
                 }
 
                 h1:nth-child(5) {
                     @include Align(center, center, row);
                     background-color: $header-color;
-                    border: 3px solid $block-color;
+                    color: $block-color;
+                    box-shadow: $shadow-color;
                     height: 55px;
                     width: 55px;
+                    font-size: 1rem;
                     border-radius: 2rem;
                     cursor: pointer;
-                    opacity: .5;
 
                     animation: fadeInLeft;
-                    animation-duration: 2.8s;
+                    animation-duration: 1.2s;
                     transition: transform .3s ease;
 
-                    &:hover {
-                        border: 3px solid $icon-color;
-                        transform: scale(1.2);
-
-                        span {
-                            background-color: $icon-color;
-                        }
+                    span {
+                        display: none;
+                        letter-spacing: .11rem;
                     }
 
-                    span {
-                        background-color: $block-color;
-                        width: 100%;
-                        height: 3px;
-                        rotate: -45deg;
+                    &:hover {
+                        width: 120px;
+                        color: $button-color;
+                        border: 3px solid $button-color;
+                        transform: scale(1.2);
+                        transition: .3s linear;
+                        border-radius: 1rem;
+
+                        span {
+                            display: block;
+                        }
                     }
                 }
 
@@ -4086,7 +4099,7 @@ body {
                     @include Align(center, flex-end, column);
                     position: absolute;
                     top: calc(47% - 85px);
-                    right: 5px;
+                    right: 10px;
                     gap: 2.3rem;
 
                     h1:nth-child(1) {
@@ -4206,6 +4219,34 @@ body {
 
             i {
                 font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+
+    #main_container {
+        @include Align(flex-start, flex-start, column);
+        padding: 23% 5% 5% 5%;
+        gap: 0;
+
+        .content_reports {
+            width: 100%;
+
+            .grafic-container {
+
+                header {
+                    display: none;
+                }
+
+                .weeks {
+                    @include Align(center, flex-end, column);
+                    position: absolute;
+                    top: calc(34% - 90px);
+                    right: 15px;
+                    gap: 1.7rem;
+                }
             }
         }
     }
