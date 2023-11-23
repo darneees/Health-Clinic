@@ -1385,7 +1385,7 @@ body {
   align-items: center;
   flex-direction: row;
   background-color: #F9FAFB;
-  color: #e45858;
+  color: #3da9fc;
   box-shadow: rgba(0, 0, 0, 0.1) 0 5px 20px;
   height: 55px;
   width: 55px;
@@ -1402,8 +1402,8 @@ body {
 }
 #main_container .content_reports .grafic-container .weeks h1:nth-child(1):hover {
   width: 120px;
-  color: #3da9fc;
-  border: 3px solid #3da9fc;
+  color: #10B981;
+  border: 3px solid #10B981;
   transform: scale(1.2);
   transition: 0.3s linear;
   border-radius: 1rem;
@@ -1417,7 +1417,7 @@ body {
   align-items: center;
   flex-direction: row;
   background-color: #F9FAFB;
-  color: #e45858;
+  color: #3da9fc;
   box-shadow: rgba(0, 0, 0, 0.1) 0 5px 20px;
   height: 55px;
   width: 55px;
@@ -1434,8 +1434,8 @@ body {
 }
 #main_container .content_reports .grafic-container .weeks h1:nth-child(2):hover {
   width: 120px;
-  color: #3da9fc;
-  border: 3px solid #3da9fc;
+  color: #10B981;
+  border: 3px solid #10B981;
   transform: scale(1.2);
   opacity: 1;
   transition: 0.3s linear;
@@ -1450,7 +1450,7 @@ body {
   align-items: center;
   flex-direction: row;
   background-color: #F9FAFB;
-  color: #e45858;
+  color: #3da9fc;
   box-shadow: rgba(0, 0, 0, 0.1) 0 5px 20px;
   height: 55px;
   width: 55px;
@@ -1467,8 +1467,8 @@ body {
 }
 #main_container .content_reports .grafic-container .weeks h1:nth-child(3):hover {
   width: 120px;
-  color: #3da9fc;
-  border: 3px solid #3da9fc;
+  color: #10B981;
+  border: 3px solid #10B981;
   transform: scale(1.2);
   opacity: 1;
   transition: 0.3s linear;
@@ -1483,7 +1483,7 @@ body {
   align-items: center;
   flex-direction: row;
   background-color: #F9FAFB;
-  color: #e45858;
+  color: #3da9fc;
   box-shadow: rgba(0, 0, 0, 0.1) 0 5px 20px;
   height: 55px;
   width: 55px;
@@ -1500,8 +1500,8 @@ body {
 }
 #main_container .content_reports .grafic-container .weeks h1:nth-child(4):hover {
   width: 120px;
-  color: #3da9fc;
-  border: 3px solid #3da9fc;
+  color: #10B981;
+  border: 3px solid #10B981;
   transform: scale(1.2);
   transition: 0.3s linear;
   border-radius: 1rem;
@@ -1515,7 +1515,7 @@ body {
   align-items: center;
   flex-direction: row;
   background-color: #F9FAFB;
-  color: #e45858;
+  color: #3da9fc;
   box-shadow: rgba(0, 0, 0, 0.1) 0 5px 20px;
   height: 55px;
   width: 55px;
@@ -1532,14 +1532,71 @@ body {
 }
 #main_container .content_reports .grafic-container .weeks h1:nth-child(5):hover {
   width: 120px;
-  color: #3da9fc;
-  border: 3px solid #3da9fc;
+  color: #10B981;
+  border: 3px solid #10B981;
   transform: scale(1.2);
   transition: 0.3s linear;
   border-radius: 1rem;
 }
 #main_container .content_reports .grafic-container .weeks h1:nth-child(5):hover span {
   display: block;
+}
+#main_container .menu_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  min-width: 100%;
+  margin: -20px 0 0 0;
+}
+#main_container .menu_container .options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  min-width: 45%;
+  flex-wrap: wrap;
+  gap: 1rem 2.8rem;
+}
+#main_container .menu_container .options article {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  min-width: 35%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 5px 20px;
+  padding: 1.1rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+#main_container .menu_container .options article h2 {
+  color: #3da9fc;
+  font-size: 1.5rem;
+}
+#main_container .menu_container .options article p {
+  color: #9CA3AF;
+  font-size: 1rem;
+  opacity: 0.5;
+}
+#main_container .menu_container .options article i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #3da9fc;
+  color: #F9FAFB;
+  position: absolute;
+  height: 5.4rem;
+  width: 5.4rem;
+  top: 0;
+  right: -1rem;
+  font-size: 2rem;
+  border-radius: 0 0.6rem 0.6rem 0;
+}
+#main_container .menu_container .options article:hover {
+  transform: scale(1.1);
 }
 
 #footer_container {
@@ -2431,7 +2488,36 @@ body {
     display: none;
   }
   #main_container .content_reports {
-    margin: -40px 0 0 0;
+    margin: -150px 0 0 0;
+  }
+  #main_container .menu_container {
+    margin: -30px 0 0 0;
+  }
+  #main_container .menu_container .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    min-width: 100%;
+    flex-wrap: wrap;
+  }
+  #main_container .menu_container .options article {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    min-width: 45%;
+  }
+  #main_container .menu_container .options article h2 {
+    font-size: 1.3rem;
+  }
+  #main_container .menu_container .options article p {
+    font-size: 0.8rem;
+  }
+  #main_container .menu_container .options article i {
+    font-size: 1.5rem;
+    height: 4.9rem;
+    width: 4.9rem;
   }
   #footer_container {
     display: flex;
@@ -2865,7 +2951,39 @@ body {
     display: none;
   }
   #main_container .content_reports {
-    margin: -50px 0 0 0;
+    margin: -100px 0 0 0;
+  }
+  #main_container .menu_container {
+    margin: -90px 0 0 0;
+  }
+  #main_container .menu_container .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    min-width: 50%;
+    flex-wrap: wrap;
+  }
+  #main_container .menu_container .options article {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    min-width: 50%;
+  }
+  #main_container .menu_container .options article h2 {
+    font-size: 1.3rem;
+  }
+  #main_container .menu_container .options article p {
+    font-size: 0.8rem;
+  }
+  #main_container .menu_container .options article i {
+    font-size: 1.5rem;
+    height: 4.9rem;
+    width: 4.9rem;
+  }
+  #main_container .menu_container .options article:nth-child(6) {
+    display: none;
   }
   #footer_container {
     display: flex;
@@ -2975,7 +3093,7 @@ body {
   }
   #main_container #doctor .header_content p {
     font-size: 1rem;
-    width: 98%;
+    width: 95%;
   }
   #main_container #doctor i {
     right: 25px;
@@ -3302,7 +3420,7 @@ body {
   }
   #main_container .content_reports {
     width: 100%;
-    margin: -45px 0 0 0;
+    margin: 15px 0 0 0;
   }
   #main_container .content_reports .grafic-container {
     display: flex;
@@ -3312,8 +3430,8 @@ body {
     width: 100%;
     gap: 8rem;
   }
-  #main_container .content_reports .grafic-container header h1 {
-    font-size: 2.5rem;
+  #main_container .content_reports .grafic-container header {
+    display: none;
   }
   #main_container .content_reports .grafic-container .lines {
     display: flex;
@@ -3347,7 +3465,6 @@ body {
     align-items: flex-end;
     flex-direction: column;
     position: absolute;
-    top: calc(47% - 85px);
     right: 30px;
     gap: 3rem;
   }
@@ -3370,6 +3487,37 @@ body {
   #main_container .content_reports .grafic-container .weeks h1:nth-child(5) {
     height: 50px;
     width: 50px;
+  }
+  #main_container .menu_container {
+    margin: -70px 0 0 0;
+  }
+  #main_container .menu_container .options {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    min-width: 100%;
+  }
+  #main_container .menu_container .options article {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    min-width: 100%;
+  }
+  #main_container .menu_container .options article h2 {
+    font-size: 1.3rem;
+  }
+  #main_container .menu_container .options article p {
+    font-size: 0.8rem;
+  }
+  #main_container .menu_container .options article i {
+    font-size: 1.5rem;
+    height: 4.9rem;
+    width: 4.9rem;
+  }
+  #main_container .menu_container .options article:nth-child(6) {
+    display: none;
   }
   #footer_container {
     display: flex;
@@ -3465,7 +3613,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    padding: 20% 5% 5% 5%;
+    padding: 23% 5% 5% 5%;
     gap: 1.1rem;
   }
   #main_container .title {
@@ -3482,7 +3630,7 @@ body {
   }
   #main_container #doctor .header_content p {
     font-size: 1rem;
-    width: 90%;
+    width: 80%;
   }
   #main_container #doctor .status {
     top: 12px;
@@ -3737,8 +3885,8 @@ body {
     width: 100%;
     gap: 8rem;
   }
-  #main_container .content_reports .grafic-container header h1 {
-    font-size: 2.5rem;
+  #main_container .content_reports .grafic-container header {
+    display: none;
   }
   #main_container .content_reports .grafic-container .lines {
     display: flex;
@@ -3772,7 +3920,7 @@ body {
     align-items: flex-end;
     flex-direction: column;
     position: absolute;
-    top: calc(47% - 85px);
+    top: calc(30% - 85px);
     right: 10px;
     gap: 2.3rem;
   }
@@ -3795,6 +3943,37 @@ body {
   #main_container .content_reports .grafic-container .weeks h1:nth-child(5) {
     height: 50px;
     width: 50px;
+  }
+  #main_container .menu_container {
+    margin: -50px 0 0 0;
+  }
+  #main_container .menu_container .options {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    min-width: 100%;
+  }
+  #main_container .menu_container .options article {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    min-width: 100%;
+  }
+  #main_container .menu_container .options article h2 {
+    font-size: 1.3rem;
+  }
+  #main_container .menu_container .options article p {
+    font-size: 0.8rem;
+  }
+  #main_container .menu_container .options article i {
+    font-size: 1.5rem;
+    height: 4.9rem;
+    width: 4.9rem;
+  }
+  #main_container .menu_container .options article:nth-child(5) {
+    display: none;
   }
   #footer_container {
     display: flex;
@@ -3863,11 +4042,12 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    padding: 23% 5% 5% 5%;
+    padding: 20% 5% 5% 5%;
     gap: 0;
   }
   #main_container .content_reports {
     width: 100%;
+    margin: 30px 0 0 0;
   }
   #main_container .content_reports .grafic-container header {
     display: none;
@@ -3881,6 +4061,9 @@ body {
     top: calc(34% - 90px);
     right: 15px;
     gap: 1.7rem;
+  }
+  #main_container .menu_container {
+    margin: -15px 0 0 0;
   }
 }
 @keyframes rotate {
